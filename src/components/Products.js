@@ -1,16 +1,12 @@
 import { useState, useEffect } from "react";
-import { useHistory } from "react-router-dom";
-import { useDispatch } from "react-redux";
-import { addToCart } from "../redux/reducers/cart";
 import axios from "axios";
-import "../styles/Products.css";
 import Loading from "./Loading";
+import Product from "./Product";
+import "../styles/Products.css";
 
 const Products = () => {
   const [products, setProducts] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-  const history = useHistory();
-  const dispatch = useDispatch();
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -31,28 +27,9 @@ const Products = () => {
 
   return (
     <div className="Products container">
-      {products.map((product) => {
-        const { id, title, price, image } = product;
-        return (
-          <div className="product" key={id}>
-            <div className="image-container">
-              <img src={image} alt={title} />
-            </div>
-            <div className="product-info">
-              <h3>{title}</h3>
-              <h3>${price}</h3>
-            </div>
-            <div className="buttons">
-              <button onClick={() => history.push(`/products/${id}`)}>
-                Product details
-              </button>
-              <button onClick={() => dispatch(addToCart(product))}>
-                Add to cart
-              </button>
-            </div>
-          </div>
-        );
-      })}
+      {products.map((product) => (
+        <Product key={product.id} {...product} />
+      ))}
     </div>
   );
 };
