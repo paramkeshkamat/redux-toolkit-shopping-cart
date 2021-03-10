@@ -1,0 +1,60 @@
+.SingleProduct {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 50px;
+  margin-top: 100px;
+  padding: 50px 0;
+}
+
+.left-div {
+  height: 300px;
+  width: 100%;
+  background-color: #fff;
+  padding: 20px;
+}
+
+.left-div img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.right-div {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.category {
+  text-transform: capitalize;
+  font-weight: 600;
+  margin: 15px 0;
+}
+
+.description {
+  flex: 1;
+}
+
+.price {
+  font-weight: 500;
+  margin: 20px 0;
+  font-size: 20px;
+}
+
+.right-div button {
+  background-color: #764abc;
+  border: none;
+  border-radius: 5px;
+  padding: 7px;
+  color: #fff;
+  cursor: pointer;
+  outline: none;
+}
+.right-div button:hover {
+  background: #764abc linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+}
