@@ -35,7 +35,7 @@ const SingleProduct = () => {
 
   return (
     <div className="SingleProduct container">
-      <div className="left-div container">
+      <div className="left-div">
         <img src={image} alt={title} />
       </div>
       <div className="right-div">
