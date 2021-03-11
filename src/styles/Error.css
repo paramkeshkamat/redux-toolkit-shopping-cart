@@ -1,0 +1,25 @@
+.Error {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.Error h1 {
+  font-size: 50px;
+}
+.Error p {
+  font-size: 20px;
+}
+
+.first {
+  margin: 10px 0;
+}
+
+.home-redirect-button {
+  text-decoration: underline;
+  cursor: pointer;
+  color: slateblue;
+}
